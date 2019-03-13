@@ -1,0 +1,44 @@
+header {
+    border:2px solid black;
+    height:250px;
+    width: 70%;
+    text-align: center;
+    margin: 50px auto;
+    margin-bottom: 5px;
+
+}
+
+.answer {
+    border:2px solid black;
+    height:150px;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 70px;
+    margin-bottom: 5px;
+  
+}
+
+.rightletter {
+    border:2px solid black;
+    height:150px;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 5px; 
+    font-size: 15px;
+ 
+  
+}
+
+.wrongletter {
+    border:2px solid black;
+    height:150px;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    font-size: 15px;
+   
+  
+}
