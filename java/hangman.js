@@ -12,6 +12,7 @@ var wrongguess = [];
 
 // Dom Manipulation
 var docUnderScore = document.getElementById('UnderScore')
+// console.log here in order to check the word for debugging purpose
 console.log(wordpicked)
 var docrightletter = document.getElementById('rightletter')
 var docwrongletter = document.getElementById('wrongletter')
@@ -36,24 +37,27 @@ document.addEventListener('keypress',(event) => {
     //add to right guess array  
         rightguess.push(keyword);
         
-        // replaces underscore with right letter
+        // replaces underscore with right letter and inserts right letter right guess array
         underscore[wordpicked.indexOf(keyword)] = keyword;
         docUnderScore.innerHTML = underscore.join(' ');
         docrightletter.innerHTML = rightguess.join(' ');
         }
-            //  Alerts users when word has been guessed
+             // sends an incorrect guess to wrongguess array
     else {
         wrongguess.push(keyword);
         docwrongletter.innerHTML = wrongguess.join(' ')
              }
-       // sends an incorrect guess to wrongguess array
-    
-     if (underscore.join(' ') == wordpicked){
-        alert('You WIN!');
-     }
+      
+        //  Alerts users when word has been guessed
+     
     
     
    });
+
+    // This is the statement I tried to use in the if statement above, however was unsuccessful    
+   if (underscore.join(' ') == wordpicked){
+    alert('You WIN!');
+ }
   
 docUnderScore.innerHTML = underscoreword()
 
