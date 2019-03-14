@@ -1,3 +1,23 @@
+body {
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    line-height: 34px;
+    color: #0f0f0f;
+    background: url("https://i.kinja-img.com/gawker-media/image/upload/s--UtjsCMpA--/c_scale,f_auto,fl_progressive,q_80,w_800/fnltdcfgfriq10dspggu.jpg");
+  }
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 20 px;
+    margin: 0 auto;
+}
+
+div, #rightletter,
+#wrongletter {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+}
+
 header {
     border:2px solid black;
     height:250px;
@@ -5,6 +25,7 @@ header {
     text-align: center;
     margin: 50px auto;
     margin-bottom: 5px;
+    background-color: antiquewhite ;
 
 }
 
@@ -16,10 +37,11 @@ header {
     margin: 0 auto;
     font-size: 40px;
     margin-bottom: 5px;
+    background-color: antiquewhite ;
   
 }
 
-.rightletter {
+.rightguess {
     border:2px solid black;
     height:150px;
     width: 70%;
@@ -27,11 +49,12 @@ header {
     margin: 0 auto;
     margin-bottom: 5px; 
     font-size: 15px;
+    background-color: antiquewhite ;
  
   
 }
 
-.wrongletter {
+.wrongguess {
     border:2px solid black;
     height:150px;
     width: 70%;
@@ -39,6 +62,7 @@ header {
     margin: 0 auto;
     margin-bottom: 5px;
     font-size: 15px;
+    background-color: antiquewhite ;
    
   
 }

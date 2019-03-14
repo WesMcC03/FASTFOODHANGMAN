@@ -1,22 +1,20 @@
-// Global Variables
-var rightguess = [];
-var wrongguess = [];
-var underscore = [];
-
-// Create a Word Bank
-var wordbank = ['Wendys','Mcdonalds','Chickfila','Whataburger','Taco Cabana','Sonic','Taco Bell','Jack in the Box','Arbys','KFC','Raising Canes',
- 'Panda Express','Burger King','Carls Jr.','Dairy Queen','Popeyes',]
+var wordbank = ['wendys','mcdonalds','chickfila','whataburger','taco cabana','sonic','taco bell','jack in the box','arbys','kfc','raising canes',
+ 'panda express','burger king','carls jr.','dairy queen','popeyes',];
 
  // Randomly select a word
 var randomnum = Math.floor(Math.random() *wordbank.length);
 var wordpicked = wordbank[randomnum];
+var underscore = [];
+var rightguess = [];
+var wrongguess = [];
 
 
 
 // Dom Manipulation
 var docUnderScore = document.getElementById('UnderScore')
-console.log(docUnderScore)
-
+console.log(wordpicked)
+var docrightletter = document.getElementById('rightletter')
+var docwrongletter = document.getElementById('wrongletter')
  
 
 
@@ -29,34 +27,35 @@ var underscoreword = () => {
     return underscore;
 }
 
-
 // Get a letter guess from user
 document.addEventListener('keypress',(event) => {
-    var keyword = String.fromCharCode(event.keyCode)
+    var keyword = String.fromCharCode(event.keyCode);
 
-// Check if users guess
+// Check if users guess is right
     if(wordpicked.indexOf(keyword) > -1) {
     //add to right guess array  
         rightguess.push(keyword);
+        
         // replaces underscore with right letter
         underscore[wordpicked.indexOf(keyword)] = keyword;
-        console.log(underscore); }
+        docUnderScore.innerHTML = underscore.join(' ');
+        docrightletter.innerHTML = rightguess.join(' ');
+        }
             //  Alerts users when word has been guessed
-        if(underscore.join("") == wordpicked){
-        alert('You WIN!');
-     }
-       // sends an incorrect guess to wrongguess array
     else {
         wrongguess.push(keyword);
+        docwrongletter.innerHTML = wrongguess.join(' ')
+             }
+       // sends an incorrect guess to wrongguess array
+    
+     if (underscore.join(' ') == wordpicked){
+        alert('You WIN!');
      }
     
     
    });
-underscoreword().join(' ')  
+  
 docUnderScore.innerHTML = underscoreword()
 
 
 
-// Check letter choice
-// If the guess is correct, send the letter to the rightletter array
-// If the guess is incorrect, send the letter to the wrong letter array
